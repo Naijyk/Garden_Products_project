@@ -5,11 +5,11 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Montserrat;
-  font-weight: 500;
 }
 
 body {
   background-color: #FFFFF1;
+  width: 1440px;
 }
 
 .wrapper {
