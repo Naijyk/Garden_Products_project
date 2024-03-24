@@ -5,23 +5,23 @@ import whatsAppIcon from './media/WhatsApp.png';
 
 export default function Footer() {
   return (
-    <div className={s.footer}>
+    <div className={[s.footer, 'wrapper'].join(' ')}>
       <h1>Contact</h1>
       <div>
-        <div className={s.footer_card}>
+        <div className={[s.footer_card, s.big_cards].join(' ')}>
           <p>Phone</p>
           <p>+49 999 999 99 99</p>
         </div>
-        <div className={s.footer_card}>
+        <div className={[s.footer_card, s.small_cards].join(' ')}>
           <p>Socials</p>
           <a href="#"><img src={instIcon} alt="instIcon" /></a>
           <a href="#"><img src={whatsAppIcon} alt="whatsAppIcon" /></a>
         </div>
-        <div className={s.footer_card}>
+        <div className={[s.footer_card, s.big_cards].join(' ')}>
           <p>Address</p>
           <p>Linkstraße 2, 8 OG, 10 785, Berlin, Deutschland</p>
         </div>
-        <div className={s.footer_card}>
+        <div className={[s.footer_card, s.small_cards].join(' ')}>
           <p>Working Hours</p>
           <p>24 hours a day</p>
         </div>
