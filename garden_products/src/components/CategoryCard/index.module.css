@@ -1,0 +1,11 @@
+.category_card {
+    width: fit-content;
+    /* height: 350px; */
+}
+
+.category_card img {
+    width: 316px;
+    height: 350px;
+    border-radius: 12px;
+    object-fit: contain;
+}

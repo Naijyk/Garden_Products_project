@@ -1,0 +1,15 @@
+
+.categories_container h1 {
+    font-size: 64px;
+    line-height: 70px;
+    margin-bottom: 40px;
+
+}
+.categories_container div{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 32px;
+    margin: 32px auto;
+}
+
+
