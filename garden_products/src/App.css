@@ -9,9 +9,14 @@
 
 body {
   background-color: #FFFFF1;
-  width: 1440px;
 }
 
 .wrapper {
   padding: 0 40px;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    padding: 0 20px;
+  }
 }
