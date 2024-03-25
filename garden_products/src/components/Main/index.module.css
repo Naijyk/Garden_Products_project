@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 600px;
-    width: 1440px;
+    width: 100%x;
 }
 
 .banner div:first-child{
