@@ -1,0 +1,74 @@
+.sale_form_component {
+    background: linear-gradient(to right, #87933D, #55610B);
+    margin: 80px 40px 0 40px;
+    border-radius: 10px;
+}
+
+.sale_form_component h1 {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70.4px;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 32px 0 24px 0;
+}
+
+.sale_form_component_content {
+    display: flex;
+    gap: 32px;
+}
+
+.sale_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sale_form input {
+    background-color: inherit;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    border: 1px solid #fffff1;
+    width: 516px;
+    padding: 16px 32px;
+    border-radius: 8px;
+}
+
+.sale_form input:focus {
+    outline: none;
+}
+
+.sale_form input::placeholder {
+    color: #fffff1;
+}
+
+.sale_form input::-webkit-outer-spin-button,
+.sale_form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sale_form input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.sale_form button {
+    width: 516px;
+    padding: 16px 32px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    border-radius: 10px;
+    border: none;
+    color: #424436;
+    cursor: pointer;
+}
+
+.errors {
+    font-size: 12px;
+    font-weight: 700;
+    color: red;
+}
