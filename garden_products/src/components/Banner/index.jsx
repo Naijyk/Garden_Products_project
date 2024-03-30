@@ -15,7 +15,7 @@ export default function Main() {
           <p>Amazing Discounts</p>
           <p>on Garden Products!</p>
       </div>
-        <Link to='./sales'> Check out </Link>   
+        <Link to='./sales'> Check out </Link>
 
   </div>
   )

@@ -6,23 +6,21 @@ import CategoriesPage from '../../pages/CategoriesPage';
 import AllProductsPage from '../../pages/AllProductsPage';
 import AllSalesPage from '../../pages/AllSalesPage';
 import s from './index.module.css';
-import logo from './logo.png'
-import basket from './basket=empty.png'
+import logo from './media/logo.png';
+import basket from './media/basket=empty.png';
 
 
 export default function Header() {
 
- 
-
-  return (    
+  return (
     <section>
         <div className={[s.header, "wrapper"].join(' ')}>
             <img src={ logo } alt="logo" />
             <NavMenu />
-            <img src={ basket } alt="basket" />  
+            <img src={ basket } alt="basket" />
         </div>
-      
-        <Routes>  
+
+        <Routes>
             <Route path='/' element={<MainPage />} />
             <Route path='/categories' element={<CategoriesPage />} />
             <Route path='/products' element={<AllProductsPage />} />

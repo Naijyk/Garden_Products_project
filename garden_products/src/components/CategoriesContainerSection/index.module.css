@@ -1,0 +1,45 @@
+.categories_container div:last-child{
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+    margin-bottom: 40px;
+}
+
+.title div:nth-child(2) {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 143px;
+    border-bottom: 1px solid #DDDDDD;
+    width: 825px;
+}
+
+.title h1 {
+    font-size: 64px;
+    line-height: 70px;
+}
+
+.all_categories_btn {
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8B8B8B;
+    cursor: pointer;
+}
+
+.all_categories_btn:hover {
+    color: #FFFFF1;
+    background-color: #8B8B8B;
+    transition: 0.3s;
+}
