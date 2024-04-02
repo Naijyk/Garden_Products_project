@@ -8,3 +8,19 @@
 .header a{
     text-decoration: none;
 }
+
+.menu_icon {
+    color: black;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    display: none;
+
+  }
+
+
+  @media(max-width: 480px) {
+    .menu_icon {
+      display: block;
+    }
+}

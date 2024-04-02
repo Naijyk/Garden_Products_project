@@ -8,26 +8,29 @@ import AllSalesPage from '../../pages/AllSalesPage';
 import s from './index.module.css';
 import logo from './logo.png'
 import basket from './basket=empty.png'
+import { FiMenu } from "react-icons/fi";
 
 
 export default function Header() {
 
- 
+
 
   return (    
-    <section>
+    <header>
         <div className={[s.header, "wrapper"].join(' ')}>
             <img src={ logo } alt="logo" />
             <NavMenu />
             <img src={ basket } alt="basket" />  
+            <FiMenu className={s.menu_icon} />
         </div>
-      
+                
+
         <Routes>  
             <Route path='/' element={<MainPage />} />
             <Route path='/categories' element={<CategoriesPage />} />
             <Route path='/products' element={<AllProductsPage />} />
             <Route path='/sales' element={<AllSalesPage />} />
           </Routes>
-    </section>
+    </header>
   )
 }

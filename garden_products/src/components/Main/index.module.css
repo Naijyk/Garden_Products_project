@@ -2,26 +2,74 @@
     display: flex;
     flex-direction: column;
     height: 600px;
-    width: 100%x;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
 .banner div:first-child{
+    Width: 1360px;
     font-weight: 700;
     font-size: 96px;
     color: #FFFFFF;
-    padding-top: 80px;    
+    padding-top: 80px;
 }
+
 .banner a{
+    display: flex;
     background-color: #92A134;
     border-radius: 10px;
     color: white;
     font-size: 20px;
     font-weight: 600;
-    gap: 10px;
     height: 58px;
     margin-top: 40px;  
+    justify-content: center;
     padding-top: 16px; 
     text-align: center;
     text-decoration: none;
     width: 218px;
    }
+
+   @media(max-width: 1000px) {
+    .banner div:first-child {
+        font-size: 90px;
+        padding-top: 60px;
+    }
+    .banner{
+        height: 476px;
+    }
+  }
+  @media(max-width: 768px) {
+    .banner div:first-child {
+        font-size: 68px;
+        width: 728px;
+    }
+    .banner{
+        height: 634px;
+    }
+  }
+  @media(max-width: 480px) {
+    .banner div:first-child {
+        font-size: 60px;
+        padding-top: 50px;
+        width: 426.67px;
+    }
+    .banner{
+        height: 600px;
+    }
+    .banner a{
+        margin-top: 24px;
+        padding-top: 12px;
+        width: 199px;
+        height: 47px;
+        font-size: 18px;
+    }
+  }
+
+  @media(max-width: 360px) {
+    .banner div:first-child {
+        font-size: 52px;
+        width: 320px;
+    }
+  }
