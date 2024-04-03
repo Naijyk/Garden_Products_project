@@ -1,0 +1,36 @@
+.product_card {
+    width: 316px;
+    height: 422px;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.product_card img{
+    width: 100%;
+    height: 284px;
+    border: 1px solid #DDDDDD;
+
+
+}
+.product_card div{
+    color: #282828;
+    padding:  20px 32px;
+    gap: 16px;
+
+}
+.product_card div > p:first-child {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  
+}
+
+.product_card div > p:last-child {
+    font-size: 40px;
+    font-weight: 600;
+}

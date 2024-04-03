@@ -9,11 +9,10 @@
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .header a:hover {
     color: #92A134;
     transition: 0.2s;
-=======
+}
 .menu_icon {
     color: black;
     width: 44px;
@@ -28,5 +27,4 @@
     .menu_icon {
       display: block;
     }
->>>>>>> zarina
 }
