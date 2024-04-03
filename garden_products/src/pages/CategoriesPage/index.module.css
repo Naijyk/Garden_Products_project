@@ -1,0 +1,14 @@
+.categories_page > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories_page h1 {
+    font-size: 64px;
+    line-height: 70px;
+    margin: 40px 0;
+}
+
+.categories_page > div > a > div {
+    width: 250px;
+}
