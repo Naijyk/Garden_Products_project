@@ -3,12 +3,9 @@
     flex-direction: column;
     height: 600px;
     width: 100%;
-<<<<<<< HEAD:garden_products/src/components/Banner/index.module.css
     margin-bottom: 80px;
-=======
     background-position: center;
     background-size: cover;
->>>>>>> zarina:garden_products/src/components/Main/index.module.css
 }
 
 .banner div:first-child{
@@ -27,26 +24,21 @@
     font-size: 20px;
     font-weight: 600;
     height: 58px;
-<<<<<<< HEAD:garden_products/src/components/Banner/index.module.css
     margin-top: 40px;
     padding-top: 16px;
-=======
     margin-top: 40px;  
     justify-content: center;
     padding-top: 16px; 
->>>>>>> zarina:garden_products/src/components/Main/index.module.css
     text-align: center;
     text-decoration: none;
     width: 218px;
    }
 
-<<<<<<< HEAD:garden_products/src/components/Banner/index.module.css
 .banner a:hover {
     color: #92A134;
     background-color: white;
     transition: 0.3s;
 }
-=======
    @media(max-width: 1000px) {
     .banner div:first-child {
         font-size: 90px;
@@ -89,4 +81,3 @@
         width: 320px;
     }
   }
->>>>>>> zarina:garden_products/src/components/Main/index.module.css
