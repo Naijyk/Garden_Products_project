@@ -1,8 +1,15 @@
 .category_card {
-    height: fit-content;
+    height: 392px;
     display: flex;
     gap: 16px;
     flex-direction: column;
+    width: 316px;
+}
+
+.category_card:hover {
+    padding: 1px;
+    color: #92A134;
+    transition: 0.1s;
 }
 
 .category_card p {
@@ -13,7 +20,6 @@
 }
 
 .category_card img {
-    width: 316px;
     height: 350px;
     object-fit: cover;
     border-radius: 10px;
