@@ -12,17 +12,17 @@ export default function SaleForm() {
 
     const onSubmit = ( data ) => {
 
-        // addDiscountUser(data);
+        addDiscountUser(data);
         console.log(data);
 
         reset();
     }
 
-    useEffect(() => {
-        const subscription = watch((value, { name, type }) => console.log(value, name, type)
-        )
-        return () => subscription.unsubscribe()
-    }, [watch]);
+    // useEffect(() => {
+    //     const subscription = watch((value, { name, type }) => console.log(value, name, type)
+    //     )
+    //     return () => subscription.unsubscribe()
+    // }, [watch]);
 
 
   return (

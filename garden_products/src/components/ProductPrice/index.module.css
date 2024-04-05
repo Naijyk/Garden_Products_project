@@ -1,0 +1,20 @@
+.product_price {
+    display: flex;
+    align-items: end;
+    gap: 16px;
+}
+
+.current_price {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 44px;
+    color: #424436;
+}
+
+.old_price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #8B8B8B;
+    text-decoration: line-through;
+}

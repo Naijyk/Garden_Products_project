@@ -1,10 +1,10 @@
 .discont_product_card {
     width: 316px;
     border: 1px solid #DDDDDD;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
-    height: 510px;
+    height: 422px;
     background-color: white;
 }
 
@@ -36,6 +36,9 @@
 
 .discont_product_card_content {
     padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .discont_product_card_content > p {
@@ -43,15 +46,15 @@
     font-size: 20px;
     line-height: 26px;
     color: #424436;
-    margin-bottom: 92px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .discont_product_card_content > div {
     display: flex;
     align-items: end;
     gap: 16px;
-    position: absolute;
-    bottom: 32px;
 }
 
 .discont_product_card_content > div p:first-child {

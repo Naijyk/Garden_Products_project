@@ -9,27 +9,29 @@ import s from './index.module.css';
 import logo from './media/logo.png';
 import basket from './media/basket=empty.png';
 import { FiMenu } from "react-icons/fi";
+import ProductByCategoryPage from '../../pages/ProductByCategoryPage';
 
 
 export default function Header() {
 
 
 
-  return (    
+  return (
     <header>
         <div className={[s.header, "wrapper"].join(' ')}>
             <img src={ logo } alt="logo" />
             <NavMenu />
-            <img src={ basket } alt="basket" />  
+            <img src={ basket } alt="basket" />
             <FiMenu className={s.menu_icon} />
         </div>
-                
 
-        <Routes>  
+
+        <Routes>
             <Route path='/' element={<MainPage />} />
             <Route path='/categories' element={<CategoriesPage />} />
             <Route path='/products' element={<AllProductsPage />} />
             <Route path='/sales' element={<AllSalesPage />} />
+            <Route path='/categories/:id' element={<ProductByCategoryPage />} />
           </Routes>
     </header>
   )
