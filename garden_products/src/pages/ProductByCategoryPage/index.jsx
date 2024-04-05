@@ -1,24 +1,34 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getProductsByCategory } from '../../requests/products';
-import ProductsByCategoryContainer from '../../components/productsByCategoryContainer';
+import ProductCard from '../../components/ProductCard';
+import s from './index.module.css';
 
 export default function ProductByCategoryPage() {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const { categoryId } = useParams();
+  const { id } = useParams();
 
-    useEffect(() => {
-        dispatch(getProductsByCategory(categoryId))
-    }, []);
+  useEffect(() => {
+    dispatch(getProductsByCategory(id))
+  }, []);
 
-    const ProductsByCategoryState = useSelector(store => store.productsByCategory);
+  const productsByCategoryState = useSelector(store => store.productsByCategory);
+
+  const { category, data } = productsByCategoryState;
 
   return (
-    <div>
-        <ProductsByCategoryContainer ProductsByCategoryState={ProductsByCategoryState} />
+    <div className={[s.products_by_category, 'wrapper'].join(' ')}>
+      <h1>{ category && category.title }</h1>
+      <div>
+        {
+          data && data.map(el => <ProductCard key={el.id} {...  el} />)
+        }
+      </div>
+
     </div>
   )
 }
+
