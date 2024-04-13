@@ -13,6 +13,11 @@
     color: #92A134;
     transition: 0.2s;
 }
+
+.cart {
+  cursor: pointer;
+}
+
 .menu_icon {
     color: black;
     width: 44px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import NavMenu from '../NavMenu';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import MainPage from '../../pages/MainPage';
 import CategoriesPage from '../../pages/CategoriesPage';
 import AllProductsPage from '../../pages/AllProductsPage';
@@ -10,6 +10,7 @@ import logo from './media/logo.png';
 import basket from './media/basket=empty.png';
 import { FiMenu } from "react-icons/fi";
 import ProductByCategoryPage from '../../pages/ProductByCategoryPage';
+import CartPage from '../../pages/CartPage';
 
 
 export default function Header() {
@@ -19,9 +20,14 @@ export default function Header() {
   return (
     <header>
         <div className={[s.header, "wrapper"].join(' ')}>
-            <img src={ logo } alt="logo" />
+            <img src={ logo }
+                 alt="logo" />
             <NavMenu />
-            <img src={ basket } alt="basket" />
+            <Link to='/cart' >
+              <img src={ basket }
+                   alt="basket"
+                   className={s.cart}/>
+            </Link>
             <FiMenu className={s.menu_icon} />
         </div>
 
@@ -32,6 +38,7 @@ export default function Header() {
             <Route path='/products' element={<AllProductsPage />} />
             <Route path='/sales' element={<AllSalesPage />} />
             <Route path='/categories/:id' element={<ProductByCategoryPage />} />
+            <Route path='/cart' element={<CartPage />} />
           </Routes>
     </header>
   )

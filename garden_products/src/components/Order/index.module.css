@@ -1,0 +1,96 @@
+.order {
+    background-color: #F2F6D3;
+    width: 550px;
+    height: 582px;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.order h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: #282828;
+    margin-bottom: 5px;
+}
+
+.order_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order_btn {
+    background-color: #92A134;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 16px 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+}
+
+.order_form input {
+    background-color: #FFFFFF;
+    color: #282828;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: none;
+}
+
+.order_form input:focus {
+    outline: none;
+}
+
+.order_form input::placeholder {
+    color: #8B8B8B;
+}
+
+.order_form input::-webkit-outer-spin-button,
+.order_form input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.order_form input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.errors {
+    font-size: 12px;
+    font-weight: 700;
+    color: red;
+}
+
+.total > p {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #8B8B8B;
+}
+
+.total_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.total_price p:first-child {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+    color: #8B8B8B;
+}
+
+.total_price p:last-child {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+    color: #424436;
+}
