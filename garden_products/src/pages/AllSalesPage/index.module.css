@@ -1,0 +1,31 @@
+.all_sales > p{
+    font-size: 64px;
+    font-weight: 700;
+    color: #282828;
+}
+
+.sort_all_sales{
+    width: 285px;
+    height: 36px;
+    gap: 16px;
+    color: #424436;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px auto;
+}
+.sort_all_sales > select{
+    border: 1px solid #DDDDDD;
+    width: 200px;
+    background-color: #FFFFFF;
+    gap: 8px;
+    padding: 8px 8px 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #424436;
+}
+
+.discount_card{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 32px;
+}
