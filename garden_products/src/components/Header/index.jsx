@@ -10,6 +10,7 @@ import logo from './media/logo.png';
 import basket from './media/basket=empty.png';
 import { FiMenu } from "react-icons/fi";
 import ProductByCategoryPage from '../../pages/ProductByCategoryPage';
+import SingleProductPage from '../../pages/SingleProductPage';
 
 
 export default function Header() {
@@ -32,6 +33,7 @@ export default function Header() {
             <Route path='/products' element={<AllProductsPage />} />
             <Route path='/sales' element={<AllSalesPage />} />
             <Route path='/categories/:id' element={<ProductByCategoryPage />} />
+            <Route path='/product/:id' element={<SingleProductPage />} />
           </Routes>
     </header>
   )

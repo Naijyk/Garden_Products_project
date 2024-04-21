@@ -48,3 +48,50 @@
     color: #FFFFFF;
     border-radius: 5px;
 }
+
+@media (max-width: 1000px) {
+    .product_card {
+        width: 255px;
+        height: 398px;
+    }
+    .product_card img {
+        height: 250px;
+    }
+}
+@media (max-width: 768px) {
+    .product_card {
+        width: 354px;
+        height: 372px; 
+    }
+}
+@media (max-width: 480px) {
+    .product_card {
+        width: 210px;
+        height: 358px;
+    }
+    .product_card img {
+        height: 210px;
+    }
+
+    .product_card > div > p:first-child {
+        font-size: 18px;
+    }
+    .discount {
+        font-size: 18px;
+        line-height: 23.4px;
+        width: 58px;
+        height: 31px;
+    } 
+}
+@media (max-width: 360px) {
+    .product_card {
+        width: 320px;
+        height: 335px;
+    }
+    .product_card img {
+        height: 220px;
+    }
+
+}
+
+
