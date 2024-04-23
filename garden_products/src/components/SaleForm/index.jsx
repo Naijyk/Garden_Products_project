@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import s from './index.module.css';
 import form_image from './form_image.png';
 import { useForm } from 'react-hook-form';
@@ -6,24 +6,16 @@ import { addDiscountUser } from '../../requests/saleForm';
 
 export default function SaleForm() {
 
-    const { register, handleSubmit, reset, formState: { errors, isDirty, isSubmitting }, watch } = useForm({
+    const { register, handleSubmit, reset, formState: { errors, isDirty, isSubmitting } } = useForm({
         mode: 'onChange',
      });
 
-    const onSubmit = ( data ) => {
+    const onSubmit = data => {
 
         addDiscountUser(data);
-        console.log(data);
 
         reset();
     }
-
-    // useEffect(() => {
-    //     const subscription = watch((value, { name, type }) => console.log(value, name, type)
-    //     )
-    //     return () => subscription.unsubscribe()
-    // }, [watch]);
-
 
   return (
     <div className={[s.sale_form_component, 'wrapper'].join(' ')}>

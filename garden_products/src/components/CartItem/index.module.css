@@ -1,0 +1,91 @@
+.cart_item {
+    display: flex;
+    background-color: #FFFFFF;
+    width: 850px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.cart_item img {
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+}
+
+.cart_item_content {
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cart_item_content > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #424436;
+}
+
+.quantity p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #424436;
+}
+
+.price {
+    display: flex;
+    gap: 32px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+}
+
+.count {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.minus {
+    color: #8B8B8B;
+    height: 58px;
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #DDDDDD;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.plus {
+    color: #8B8B8B;
+    height: 58px;
+    width: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #DDDDDD;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete_item {
+    cursor: pointer;
+}
+
+.delete_item:hover {
+    background-color: #DDDDDD;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}

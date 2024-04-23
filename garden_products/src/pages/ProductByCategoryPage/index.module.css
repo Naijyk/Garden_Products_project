@@ -1,4 +1,4 @@
-.products_by_category > div {
+.products_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
@@ -8,5 +8,50 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 70px;
-    margin-bottom: 40px;
+    margin: 40px 0;
+}
+
+.sort_block {
+    display: flex;
+}
+
+.links_block {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.links {
+    border: 2px solid #DDDDDD;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8B8B8B;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btns_line {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 117px;
+    border-bottom: 2px solid #DDDDDD;
+    width: 16px;
+}
+
+.btns_line_two {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 251px;
+    border-bottom: 2px solid #DDDDDD;
+    width: 16px;
+}
+
+.category_title_btn {
+    color: #424436;
 }

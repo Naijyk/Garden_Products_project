@@ -1,4 +1,4 @@
-.categories_page > div {
+.categories_page > div:last-child {
     display: flex;
     justify-content: space-between;
 }
@@ -9,6 +9,38 @@
     margin: 40px 0;
 }
 
-.categories_page > div > a > div {
+.categories_page > .categories_container > a > div {
     width: 250px;
+}
+
+.links_block {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.links {
+    border: 2px solid #DDDDDD;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #8B8B8B;
+    cursor: pointer;
+    width: 120px;
+}
+
+.categories_btn {
+    color: #424436;
+}
+
+.btns_line {
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 120px;
+    border-bottom: 2px solid #DDDDDD;
+    width: 16px;
 }
