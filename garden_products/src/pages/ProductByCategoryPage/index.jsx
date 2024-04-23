@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { getProductsByCategory } from '../../requests/products';
 import ProductCard from '../../components/ProductCard';
 import s from './index.module.css';
 import { sortProductsAction } from '../../store/reducers/productsByCategoryReducer';
+import { checkPriceAction, getDiscountProductsAction } from '../../store/reducers/allProductsReducer';
 
 export default function ProductByCategoryPage() {
+
+  const [checked, setChecked] = useState(false);
+  const handleCheck = () =>setChecked(!checked);
+  const handleClick = e => dispatch(getDiscountProductsAction(e.target.checked));
+
 
   const dispatch = useDispatch();
 
@@ -21,6 +27,19 @@ export default function ProductByCategoryPage() {
 
   const order = event => {
     dispatch(sortProductsAction(event.target.value))
+  }
+
+  const addPriceRange = event => {
+    event.preventDefault();
+    const {min_value, max_value} = event.target;
+
+    const check_values = {
+      min_value: min_value.value || 0,
+      max_value: max_value.value || Infinity
+    }
+
+    dispatch(checkPriceAction(check_values))
+    event.target.reset()
   }
 
   return (
@@ -40,27 +59,33 @@ export default function ProductByCategoryPage() {
       </section>
 
       <h1>{ category && category.title }</h1>
-      <div className={s.sort_block}>
-        <div>
-          <p>Price</p>
-          <input type="text" placeholder='from' />
-          <input type="text" placeholder='to' />
-        </div>
-        <div>
+
+      <div className={s.products_filter}>
+
+        <form className={s.price_range} onSubmit={addPriceRange}>
           <label>
-            <span>Discounted items</span>
-            <input type="checkbox" />
+            <span>Price</span>
+            <input type="number" placeholder='from' name='min_value' />
+            <input type="number" placeholder='to' name='max_value' />
+            <input type='submit' style={{visibility: 'hidden'}} />
           </label>
-        </div>
-        <div>
-          <span>Sorted</span>
-          <select onInput={order}>
-            <option value="">by default</option>
-            <option value="name">by name</option>
-            <option value="price_asc">price: low-high</option>
-            <option value="price_desc">price: high-low</option>
-          </select>
-        </div>
+        </form>
+
+        <label>
+        <span> Discounted items </span>
+        <input type="checkbox" checked={checked} onChange={handleCheck} onClick={handleClick}/>
+        </label>
+
+        <label>
+        <span>Sorted</span>
+        <select onInput={order}>
+          <option disabled>by default</option>
+          <option value='price_desc'>by descending price</option>
+          <option value='price_asc'>by ascending price</option>
+          <option value='alphabetically'>alphabetically</option>
+        </select>
+        </label>
+
       </div>
       <div className={s.products_container}>
         {

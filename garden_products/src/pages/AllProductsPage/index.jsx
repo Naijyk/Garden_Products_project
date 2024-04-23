@@ -6,6 +6,7 @@ import s from './index.module.css'
 import { checkPriceAction, getDiscountProductsAction, sortProductsAction } from '../../store/reducers/allProductsReducer';
 
 export default function AllProductsPage() {
+
   const dispatch = useDispatch();
 
   const [checked, setChecked] = useState(false);
@@ -18,12 +19,12 @@ export default function AllProductsPage() {
   }, [])
 
   const allProductsData = useSelector(store => store.allProducts);
-  
+
   const order = event => {
     dispatch(sortProductsAction(event.target.value))
   }
 
-  const add_price_range = event => {
+  const addPriceRange = event => {
     event.preventDefault();
     const {min_value, max_value} = event.target;
 
@@ -37,12 +38,12 @@ export default function AllProductsPage() {
   }
 
   return (
-        
+
         <div className={['wrapper', s.products_page].join(' ')}>
           <p>All products</p>
           <div className={s.products_filter}>
 
-            <form className={s.price_range} onSubmit={add_price_range}>
+            <form className={s.price_range} onSubmit={addPriceRange}>
               <label>
                 <span>Price</span>
                 <input type="number" placeholder='from' name='min_value' />
@@ -50,7 +51,7 @@ export default function AllProductsPage() {
                 <input type='submit' style={{visibility: 'hidden'}} />
               </label>
             </form>
-           
+
           <label>
             <span> Discounted items </span>
             <input type="checkbox" checked={checked} onChange={handleCheck} onClick={handleClick}/>
@@ -65,16 +66,17 @@ export default function AllProductsPage() {
               <option value='alphabetically'>alphabetically</option>
             </select>
           </label>
-            
+
           </div>
+
           <div className={s.products_card}>
             {
             allProductsData
             .filter(el => el.visible)
             .map(el => <ProductCard key={el.id} {...el} />)
-            } 
+            }
           </div>
-         
+
         </div>
   )
 }

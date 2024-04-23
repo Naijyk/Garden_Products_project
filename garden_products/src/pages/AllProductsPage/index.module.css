@@ -3,13 +3,16 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
+
 .products_page{
     color: #282828;
 }
+
 .products_page > p{
     font-size: 64px;
     font-weight: 700;
 }
+
 .products_filter{
     display: flex;
     justify-content:flex-start;
@@ -29,32 +32,34 @@
     text-align: center;
     gap: 16px;
     height: 36px;
-
 }
+
 .products_filter input{
     border-radius: 5px;
     border: 1px solid #DDDDDD;
-
 }
+
 .price_range{
     width: 309px;
 }
+
 .price_range input{
     width: 112px;
     padding: 8px 16px;
     color: #8B8B8B;
     font-size: 16px;
-
 }
+
 .products_filter input[type="checkbox"]{
     appearance: none;
     min-width: 36px;
     background-color: #FFFFFF;
     gap: 10px;
-    position: relative; 
+    position: relative;
 }
+
 .products_filter input[type="checkbox"]::before {
-    content: "\1F5F8"; 
+    content: "\1F5F8";
     font-size: 30px;
     color: transparent;
     position: absolute;
@@ -66,6 +71,7 @@
 .products_filter input[type="checkbox"]:checked::before {
     color: #282828;
 }
+
 .products_filter select{
     width: 200px;
     background-color: #FFFFFF;
@@ -77,6 +83,7 @@
     border: 1px solid #DDDDDD;
     color:  #424436;
 }
+
 @media (max-width: 1000px) {
     .products_card{
         gap: 20px;
@@ -93,8 +100,9 @@
     .products_filter{
         flex-wrap: wrap;
         margin: 32px auto;
-    }  
+    }
 }
+
 @media (max-width: 480px) {
     .products_page > p{
         font-size: 48px;
@@ -105,7 +113,7 @@
         font-size: 18px;
         margin: 24px auto;
         gap: 32px;
-    }    
+    }
     .products_filter label{
         gap: 12px;
         height: 34px;
@@ -122,15 +130,14 @@
     .products_filter select{
         font-size: 14px;
     }
-    
+
 }
+
 @media (max-width: 360px) {
     .products_card{
         grid-template-columns: 1fr;
     }
     .products_page > p{
         font-size: 40px;
-    }    
+    }
 }
-
-
