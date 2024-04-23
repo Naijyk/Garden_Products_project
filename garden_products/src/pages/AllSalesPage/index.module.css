@@ -1,27 +1,50 @@
+.all_sales{
+    color: #282828;
+}
 .all_sales > p{
     font-size: 64px;
     font-weight: 700;
-    color: #282828;
 }
-
-.sort_all_sales{
-    width: 285px;
-    height: 36px;
-    gap: 16px;
-    color: #424436;
+.sale_products_filter{
+    display: flex;
+    justify-content:flex-start;
+    gap: 40px;
     font-size: 20px;
     font-weight: 600;
     margin: 40px auto;
+    height: 36px;
 }
-.sort_all_sales > select{
+
+.sale_products_filter span{
+    padding: 5px 0;
+}
+
+.sale_products_filter label{
+    display: flex;
+    text-align: center;
+    gap: 16px;
+}
+.sale_products_filter input{
+    border-radius: 5px;
     border: 1px solid #DDDDDD;
+
+}
+.price_range input{
+    width: 112px;
+    padding: 8px 16px;
+    color: #8B8B8B;
+    font-size: 16px;
+
+}
+.sale_products_filter select{
     width: 200px;
     background-color: #FFFFFF;
     gap: 8px;
     padding: 8px 8px 8px 16px;
     font-size: 16px;
     font-weight: 500;
-    color: #424436;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
 }
 
 .discount_card{

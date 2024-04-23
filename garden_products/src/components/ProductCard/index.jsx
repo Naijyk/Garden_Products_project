@@ -11,7 +11,7 @@ export default function ProductCard({ id, image, title, price, discont_price }) 
   const discount = discont_price && (((price / discont_price) * 100) - 100).toFixed();
 
   return (
-    <Link to='/'>
+    <Link to={`/product/${id}`}>
       <div className={s.product_card}>
         <img src={img} alt={title} />
         {discount && <p className={s.discount}>-{discount}%</p>}

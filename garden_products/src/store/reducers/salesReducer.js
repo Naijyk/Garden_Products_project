@@ -2,11 +2,14 @@ const defaultState = [];
 
 const LOAD_DISCONT_PRODUCTS = 'LOAD_DISCONT_PRODUCTS';
 const SORT_DISCONT_PRODUCTS = 'SORT_DISCONT_PRODUCTS';
-
+const CHECK_DISCONT_PRICE = 'CHECK_DISCONT_PRICE';
 
 
 export const loadDiscontProductsAction = product => ({ type:LOAD_DISCONT_PRODUCTS, payload: product });
 export const sortDiscountProductsAction = (value) => ({type: SORT_DISCONT_PRODUCTS, payload: value});
+export const checkDiscontPriceAction = values => ({ type:CHECK_DISCONT_PRICE, payload: values });
+
+
 
 export const DiscontProductsReducer = (state = defaultState, action) => {
     if( action.type === LOAD_DISCONT_PRODUCTS ){
@@ -20,7 +23,16 @@ export const DiscontProductsReducer = (state = defaultState, action) => {
             state.sort((a, b) => b.price - a.price)
         }
         return [...state]
-    }
-
+    }else if (action.type === CHECK_DISCONT_PRICE){
+        const {min_value, max_value} = action.payload;
+        return state.map(el => {
+          if(el.discont_price >= min_value && el.discont_price <= max_value){
+            el.visible = true
+          } else {
+            el.visible = false
+          }
+          return el
+        })
+      }
     return state
 };

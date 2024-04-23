@@ -1,16 +1,25 @@
 .nav_menu{
+    width: 518px;
     display: flex;
     gap: 32px;
     align-items: center;
     justify-content: center;
     font-size: 20px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .nav_menu a{
     text-decoration: none;
     color: #424436;
 }
+@media(max-width: 768px) {
+    .nav_menu {
+        width: 482px;
+        gap: 20px;
+    }
+  }
+
 
 @media(max-width: 480px) {
     .nav_menu {
