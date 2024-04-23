@@ -10,10 +10,10 @@ export const getProductsByCategory = id => {
     }
 }
 
-export const getSingleProduct = id => {
+export const getSingleProduct = (id) =>{
     return dispatch => {
-       fetch(`${domen}/products/${id}`)
-          .then(res => res.json())
-          .then(json => dispatch(loadSingleProductAction(json)))
+        fetch (`${domen}/products/${id}`)
+        .then(res => res.json())
+        .then(json => dispatch(loadSingleProductAction(json)));
     }
 }

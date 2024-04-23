@@ -2,10 +2,10 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { categoriesReducer } from './reducers/categoriesReducer';
 import { thunk } from 'redux-thunk';
 import { DiscontProductsReducer } from './reducers/salesReducer';
-import { allProductsreducer } from './reducers/allProductsReducer';
+import { allProductsReducer } from './reducers/allProductsReducer';
 import { ProductsByCategoryReducer } from './reducers/productsByCategoryReducer';
 import { cartReducer } from './reducers/cartReducer';
-import { singleProductsReducer } from './reducers/singleProductReducer';
+import { singleProductReducer } from './reducers/singleProductReducer';
 
 
 const rootReducer = combineReducers({
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
     allProducts: allProductsreducer,
     productsByCategory: ProductsByCategoryReducer,
     cart: cartReducer,
-    singleProduct: singleProductsReducer
+    singleProduct: singleProductReducer
 });
 
 export const store = createStore( rootReducer, applyMiddleware(thunk) );

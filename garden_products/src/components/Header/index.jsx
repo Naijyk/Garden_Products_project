@@ -50,7 +50,7 @@ export default function Header() {
             <Route path='/categories/:id' element={<ProductByCategoryPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='*' element={<NotFoundPage />} />
-            <Route path='/product/:id' element={<SingleProductPage />}/>
+            <Route path='/product/:id' element={<SingleProductPage />} />
           </Routes>
     </header>
   )
