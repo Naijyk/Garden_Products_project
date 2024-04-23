@@ -3,7 +3,7 @@
     justify-content: space-between;
     gap: 20px;
     color: #424436;
-    
+
 }
 .single_product img{
     border: 1px solid #DDDDDD;
@@ -30,7 +30,7 @@
 .price > p:nth-child(1){
     font-size: 64px;
     font-weight: 700;
-    line-height: 70.4px;    
+    line-height: 70.4px;
 }
 
 .price > p:nth-child(2){
@@ -40,10 +40,10 @@
     color: #8B8B8B;
     padding-top: 18px;
     text-decoration: line-through;
-} 
+}
 
 .price > p:nth-child(3){
-    padding: 4px 8px;
+    padding: 4px 6px;
     background-color: #F26D22;
     font-weight: 600;
     font-size: 20px;
@@ -70,7 +70,7 @@
     font-weight: 600;
     min-width: 200px;
     gap: 0px;
-    justify-content: space-between; 
+    justify-content: space-between;
     background-color: #FFFFFF;
 }
 
@@ -148,19 +148,19 @@
         line-height: 35.2px;
         margin-bottom: 20px;
     }
-    
+
     .price{
      width: 309px;
     }
     .price > p:nth-child(1){
         font-size: 56px;
-        line-height: 61.6px;    
-        }    
+        line-height: 61.6px;
+        }
     .price > p:nth-child(2){
         font-size: 32px;
         line-height: 41.6px;
         padding-top: 19px;
-    } 
+    }
     .add_to_cart {
         display: flex;
         flex-direction: column;

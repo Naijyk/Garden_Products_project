@@ -55,3 +55,81 @@
 .category_title_btn {
     color: #424436;
 }
+
+.products_filter{
+    display: flex;
+    justify-content:flex-start;
+    gap: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px auto;
+}
+
+.products_filter span{
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+.products_filter label{
+    display: flex;
+    text-align: center;
+    gap: 16px;
+    height: 36px;
+
+}
+.products_filter input{
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+
+}
+.price_range{
+    width: 309px;
+}
+.price_range input{
+    width: 112px;
+    padding: 8px 16px;
+    color: #8B8B8B;
+    font-size: 16px;
+
+}
+.products_filter input[type="checkbox"]{
+    appearance: none;
+    min-width: 36px;
+    background-color: #FFFFFF;
+    gap: 10px;
+    position: relative;
+}
+.products_filter input[type="checkbox"]::before {
+    content: "\1F5F8";
+    font-size: 30px;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products_filter input[type="checkbox"]:checked::before {
+    color: #282828;
+}
+.products_filter select{
+    width: 200px;
+    background-color: #FFFFFF;
+    gap: 8px;
+    padding: 8px 8px 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+    color:  #424436;
+}
+
+.products_filter input::-webkit-outer-spin-button,
+.products_filter input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.products_filter input[type=number] {
+    -moz-appearance: textfield;
+}

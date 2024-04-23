@@ -13,7 +13,7 @@ export default function DiscontProductCard({ id, image, title, price, discont_pr
 
   return (
     <div className={s.discont_product_card} >
-      <Link to='/'>
+      <Link to={`/product/${id}`}>
           <img src={img} alt={title} />
           <p className={s.discount}>-{ (((price / discont_price) * 100) - 100).toFixed() } %</p>
           <div className={s.discont_product_card_content}>
