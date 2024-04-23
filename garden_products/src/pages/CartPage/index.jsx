@@ -1,11 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './index.module.css';
 import { useSelector } from 'react-redux';
 import CartItemsContainer from '../../components/CartItemsContainer';
 import { Link } from 'react-router-dom';
 import Order from '../../components/Order';
+import ModalWindow from '../../components/ModalWindow';
 
 export default function CartPage() {
+
+  const [modalActive, setModalActive] = useState(false);
+
+  const openModal = () => setModalActive(true);
+  const closeModal = () => setModalActive(false);
 
   const cartState = useSelector(store => store.cart);
 
@@ -30,8 +36,10 @@ export default function CartPage() {
             </Link>
           </div>
           : <div className={s.cart_content}>
+              <ModalWindow closeModal={closeModal}
+                            modalActive={modalActive} />
               <CartItemsContainer />
-              <Order />
+              <Order openModal={openModal} />
           </div>
         }
     </div>

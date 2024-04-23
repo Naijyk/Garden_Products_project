@@ -15,8 +15,11 @@ export default function DiscontProductsSection() {
 
     const discontProductsData = useSelector(store => store.discontProducts);
 
-    const productsWithSale = discontProductsData.filter(el => el?.discont_price)
-                                                .slice(0, 4);
+    const productsWithSale = discontProductsData.filter(el => el?.discont_price);
+
+    const getRandomRiver = (n, arr) => arr.sort(() => 0.5 - Math.random()).slice(0, n);
+
+  const randomSet = getRandomRiver(4, productsWithSale);
 
   return (
     <section className={['wrapper', s.sales_section].join(' ')}>
@@ -29,7 +32,7 @@ export default function DiscontProductsSection() {
 
         <div className={s.discont_products_container}>
             {
-               productsWithSale.map(el => <DiscontProductCard key={el.id} {...el} />)
+               randomSet.map(el => <DiscontProductCard key={el.id} {...el} />)
             }
         </div>
     </section>

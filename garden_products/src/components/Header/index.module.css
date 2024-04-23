@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 128px;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .header a{
@@ -16,6 +17,7 @@
 
 .cart {
   cursor: pointer;
+  position: relative;
 }
 
 .menu_icon {
@@ -25,8 +27,25 @@
     cursor: pointer;
     display: none;
 
-  }
+}
 
+.total_items {
+  position: absolute;
+  top: 5px;
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #92A134;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 11px;
+  color: #FFFFF1;
+}
 
   @media(max-width: 480px) {
     .menu_icon {

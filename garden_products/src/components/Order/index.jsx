@@ -2,23 +2,36 @@ import React from 'react';
 import s from './index.module.css';
 import { useForm } from 'react-hook-form';
 import { useSelector } from 'react-redux';
+import { domen } from '../../requests/allProducts';
 
-export default function Order() {
+export default function Order({ openModal }) {
 
-    const { register, handleSubmit, reset, formState: { errors, isDirty, isSubmitting } } = useForm({
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
         mode: 'onChange',
      });
 
-    const onSubmit = ( data ) => {
-
-        console.log(data);
-
-        reset();
+    const addOrder = order => {
+        fetch(`${domen}/order/send`, {
+          method: 'POST',
+          body: JSON.stringify(order),
+          headers: {'Content-Type': 'application/json;charset=utf-8'}
+        })
+          .then(res => res.json())
+          .then(json => console.log(json))
     }
 
     const cartState = useSelector(store => store.cart);
 
-    const totalDiscont = cartState.reduce((acc, el) => acc + (el.discont_price && el.price), 0);
+    const onSubmit = ( data ) => {
+        data = {...data, cart: cartState};
+        addOrder(data);
+
+        openModal();
+
+        reset();
+    }
+
+    // const totalDiscont = cartState.reduce((acc, el) => acc + (el.discont_price && el.price), 0);
 
     const totalPrice = cartState.reduce((acc, el) => acc + (el.discont_price * el.count || el.price * el.count), 0);
 
@@ -29,7 +42,7 @@ export default function Order() {
             <p>{ cartState.length } Items</p>
             <div className={s.total_price}>
                 <p>Total</p>
-                <p>${ totalPrice }</p>
+                <p>${ totalPrice.toFixed(2) }</p>
             </div>
         </div>
         <form className={s.order_form}

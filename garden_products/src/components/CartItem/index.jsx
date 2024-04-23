@@ -34,8 +34,8 @@ export default function CartItem({ id, image, title, price, discont_price, count
               <FiPlus />
             </div>
           </div>
-          <ProductPrice price={price * count}
-                        discont_price={discont_price && (discont_price * count)} />
+          <ProductPrice price={(price * count).toFixed(2)}
+                        discont_price={(discont_price && (discont_price * count).toFixed(2))} />
         </div>
       </div>
     </div>

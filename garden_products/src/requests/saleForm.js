@@ -1,5 +1,7 @@
+import { domen } from "./allProducts"
+
 export const addDiscountUser = discount_user => {
-    fetch('http://localhost:3333/sale/send', {
+    fetch(`${domen}/sale/send`, {
       method: 'POST',
       body: JSON.stringify(discount_user),
       headers: {'Content-Type': 'application/json;charset=utf-8'}
